@@ -38,15 +38,15 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 [[ "$MIP" != "$MIP2" ]] && IP="$MIP2" || IP="$MIP"
 }  
 function_verify () {
-  permited=$(curl -sSL "https://github.com/Hshshsyd/VPS-MX-8.0/blob/master/Control-IP")
+  permited=$(curl -sSL "https://github.com/Hshshsyd/Control/blob/228e8f2925fb33c66f351bbe809c67015ffd40ae/Control-IP")
   [[ $(echo $permited|grep "${IP}") = "" ]] && {
   echo -e "\n\n\n\033[1;95m======================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR!,CONATACTE A @Rufu99\n======================================================\n"
   [[ -d /etc/newadm ]] && rm -rf /etc/newadm
   exit 1
   } || {
   ### INTALAR VERCION DE SCRIPT
-  v1=$(curl -sSL "https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/Vercion")
-  echo "$v1" > /etc/versin_script
+  v1=$(curl -sSL " https://github.com/Hshshsyd/Generador_Gen_VPS-MX/blob/79e9c78c492ca627304facac3e8d9b6f1dec4c20/Vercion")
+  echo "$v1" > /etc/versin_script 
   }
 }
 funcao_idioma () {
